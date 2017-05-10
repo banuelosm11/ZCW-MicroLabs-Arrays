@@ -95,7 +95,7 @@ public class ArrayParty {
     public ArrayList<String> pack(char[] letters){
 
         for(int i=0; i<letters.length; i++){
-            
+
         }
 
         ArrayList<String> inputArray = new ArrayList<String>();
