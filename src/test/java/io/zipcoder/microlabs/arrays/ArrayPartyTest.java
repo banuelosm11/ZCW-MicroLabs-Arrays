@@ -3,6 +3,9 @@ package io.zipcoder.microlabs.arrays;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class ArrayPartyTest {
 
     @Test
@@ -77,7 +80,43 @@ public class ArrayPartyTest {
 
     //TODO Define the method isPalindromeTest
 
+    @Test
+    public void isPalindromeTest(){
+
+        //Given:
+        String[] palindromic = {"Sausage", "Eggs", "Beans", "Beans", "Eggs", "Sausage"};
+        ArrayParty arrayParty = new ArrayParty();
+
+        //When:
+        boolean actual = arrayParty.isPalindrome(palindromic);
+
+        //Then:
+        Assert.assertTrue(actual);
+
+    }
+
     //TODO Define the method compressTest
+
+    @Test
+    public void compressTest(){
+
+        //Given:
+        int[] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
+        ArrayParty arrayParty = new ArrayParty();
+        ArrayList<Integer> expected = new ArrayList<Integer>();
+        int[]a ={1, 3, 2, 1, 4};
+        for(int e: a){
+            expected.add(e);
+        }
+
+
+        //When:
+        ArrayList<Integer> actual = arrayParty.compress(nums);
+
+        //Then:
+        Assert.assertEquals(expected, actual);
+
+    }
 
     //TODO Define the method packTest
 

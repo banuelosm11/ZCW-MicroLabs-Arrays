@@ -1,16 +1,18 @@
 package io.zipcoder.microlabs.arrays;
 
 
+import java.util.ArrayList;
+
 public class ArrayParty {
 
-    public String printArray(String[] inputArray){
+    public String printArray(String[] inputArray) {
 
         String output = "*** Output ***\n";
 
-        for(int i = 0; i < inputArray.length; i++){
-            if(i == inputArray.length - 1) {
+        for (int i = 0; i < inputArray.length; i++) {
+            if (i == inputArray.length - 1) {
                 output += inputArray[i];
-            }else{
+            } else {
                 output += inputArray[i] + "\n";
             }
         }
@@ -18,7 +20,7 @@ public class ArrayParty {
         return output;
     }
 
-    public String lastElement(String[] inputArray){
+    public String lastElement(String[] inputArray) {
 
         String output = "*** Output ***\n";
 
@@ -29,7 +31,7 @@ public class ArrayParty {
 
     //TODO Define the method lastButOne
 
-    public String lastButOne(String[] inputArray){
+    public String lastButOne(String[] inputArray) {
 
         String output = "*** Output ***\n";
 
@@ -40,12 +42,12 @@ public class ArrayParty {
 
     //TODO Define the method reverse
 
-    public String reverse(String[] inputArray){
+    public String reverse(String[] inputArray) {
 
         String output = "*** Output ***\n";
 
-        for( int i = inputArray.length - 1; i >= 0; i--){
-                output += inputArray[i] + "\n";
+        for (int i = inputArray.length - 1; i >= 0; i--) {
+            output += inputArray[i] + "\n";
         }
 
         return output;
@@ -53,9 +55,43 @@ public class ArrayParty {
 
     //TODO Define the method isPalindrome
 
-    //TODO Define the method compress
+    public boolean isPalindrome(String[] inputArray) {
 
-    //TODO Define the method pack
+
+        for (int i = 0; i < inputArray.length / 2; i++) {
+            if (!inputArray[i].equals(inputArray[inputArray.length - (i + 1)])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+        //TODO Define the method compress
+
+    public ArrayList<Integer> compress(int[] nums){
+
+        ArrayList<Integer> inputArray = new ArrayList<Integer>();
+
+        for(int e: nums){
+            inputArray.add(e);
+        }
+
+        for(int i=0; i<inputArray.size(); i++) {
+            for (int j = 0; j < inputArray.size()-(i+1); j++) {
+                if (inputArray.get(i) == inputArray.get(i + 1)) {
+                    inputArray.remove(i + 1);
+                }
+            }
+        }
+        if(inputArray.get(inputArray.size()-1) == inputArray.get(inputArray.size()-2)){
+                inputArray.remove(inputArray.size()-1);
+            }
+
+        return inputArray;
+
+    }
+
+        //TODO Define the method pack
 
 
 
