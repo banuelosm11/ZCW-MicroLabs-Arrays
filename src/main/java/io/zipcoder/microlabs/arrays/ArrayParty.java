@@ -92,7 +92,19 @@ public class ArrayParty {
     }
 
         //TODO Define the method pack
+    public ArrayList<String> pack(char[] letters){
 
+        for(int i=0; i<letters.length; i++){
+            
+        }
+
+        ArrayList<String> inputArray = new ArrayList<String>();
+
+
+
+
+        return inputArray;
+    }
 
 
 }

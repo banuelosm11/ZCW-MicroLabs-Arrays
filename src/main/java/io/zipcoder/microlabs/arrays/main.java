@@ -10,9 +10,9 @@ public class main {
     public static void main(String[] args) {
         ArrayParty test = new ArrayParty();
 
-        int[] a = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
+        char[] a = {'a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e'};
 
 
-        System.out.println(test.compress(a));
+        System.out.println(test.pack(a));
     }
 }

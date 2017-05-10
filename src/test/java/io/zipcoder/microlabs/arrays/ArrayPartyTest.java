@@ -120,5 +120,26 @@ public class ArrayPartyTest {
 
     //TODO Define the method packTest
 
+    @Test
+    public void packTest(){
+
+        //Given:
+        char[] letters = {'a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e'};
+        ArrayParty arrayParty = new ArrayParty();
+        ArrayList<String> expected = new ArrayList<String>();
+        String[]a ={"aaaa", "b", "cc", "aa", "d", "eeee"};
+        for(String e: a){
+            expected.add(e);
+        }
+
+
+        //When:
+        ArrayList<String> actual = arrayParty.pack(letters);
+
+        //Then:
+        Assert.assertEquals(expected, actual);
+
+    }
+
 
 }
