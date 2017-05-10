@@ -65,7 +65,7 @@ public class ArrayPartyTest {
         String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         ArrayParty arrayParty = new ArrayParty();
         String expected = "*** Output ***\n" + "Mushrooms\n" + "Tomatoes\n"+
-                "Bacon\n"+"Beans\n"+"Eggs\n"+ "Sausage\n" + "Tails\n";
+                "Bacon\n"+"Beans\n"+"Eggs\n"+ "Sausage\n";
 
         //When:
         String actual = arrayParty.reverse(breakfast);

@@ -44,8 +44,11 @@ public class ArrayParty {
 
         String output = "*** Output ***\n";
 
-        
-        return "";
+        for( int i = inputArray.length - 1; i >= 0; i--){
+                output += inputArray[i] + "\n";
+        }
+
+        return output;
     }
 
     //TODO Define the method isPalindrome
