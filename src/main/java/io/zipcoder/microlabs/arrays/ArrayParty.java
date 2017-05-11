@@ -70,21 +70,18 @@ public class ArrayParty {
 
     public ArrayList<Integer> compress(int[] nums){
 
-        ArrayList<Integer> inputArray = new ArrayList<Integer>();
+        ArrayList<Integer> noDuplicates = new ArrayList<Integer>();
 
-        for(int e: nums){
-            inputArray.add(e);
-        }
+        for(int i=0; i<nums.length-1; i++) {
 
-        for(int i=0; i<inputArray.size(); i++) {
-            for (int j = 0; j < inputArray.size()-2; j++) {
-                if (inputArray.get(i) == inputArray.get(i + 1)) {
-                    inputArray.remove(i + 1);
+            if (nums[i] == nums[i + 1] ) {
+                if(noDuplicates.isEmpty() || noDuplicates.get(noDuplicates.size()-1) != nums[i]) {
+                    noDuplicates.add(nums[i]);
                 }
             }
         }
 
-        return inputArray;
+        return noDuplicates;
 
     }
 
