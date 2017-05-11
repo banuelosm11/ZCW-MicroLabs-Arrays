@@ -59,7 +59,7 @@ public class ArrayParty {
 
 
         for (int i = 0; i < inputArray.length / 2; i++) {
-            if (!inputArray[i].equals(inputArray[inputArray.length - (i + 1)])) {
+            if (!inputArray[i].equals(inputArray[inputArray.length - 1 -i])) {
                 return false;
             }
         }
@@ -77,34 +77,31 @@ public class ArrayParty {
         }
 
         for(int i=0; i<inputArray.size(); i++) {
-            for (int j = 0; j < inputArray.size()-(i+1); j++) {
+            for (int j = 0; j < inputArray.size()-2; j++) {
                 if (inputArray.get(i) == inputArray.get(i + 1)) {
                     inputArray.remove(i + 1);
                 }
             }
         }
-        if(inputArray.get(inputArray.size()-1) == inputArray.get(inputArray.size()-2)){
-                inputArray.remove(inputArray.size()-1);
-            }
 
         return inputArray;
 
     }
 
         //TODO Define the method pack
-    public ArrayList<String> pack(char[] letters){
-
-        for(int i=0; i<letters.length; i++){
-
-        }
-
-        ArrayList<String> inputArray = new ArrayList<String>();
-
-
-
-
-        return inputArray;
-    }
+//    public ArrayList<String> pack(char[] letters){
+//
+//        for(int i=0; i<letters.length; i++){
+//
+//        }
+//
+//        ArrayList<String> inputArray = new ArrayList<String>();
+//
+//
+//
+//
+//        return inputArray;
+//    }
 
 
 }

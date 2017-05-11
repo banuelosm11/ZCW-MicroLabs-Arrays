@@ -12,7 +12,12 @@ public class main {
 
         char[] a = {'a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e'};
 
+        String[] breakfast = {"Sausage", "Eggs", "Beans", "Eggs", "Sausage"};
 
-        System.out.println(test.pack(a));
+        int[] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
+
+
+        System.out.println(test.compress(nums));
+       // System.out.println(test.pack(a));
     }
 }
