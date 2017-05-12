@@ -100,7 +100,7 @@ public class ArrayParty {
                 consecutiveChars.append(", " + letters[i+1]);
             }
         }
-
+        
         return consecutiveChars.toString();
     }
 
