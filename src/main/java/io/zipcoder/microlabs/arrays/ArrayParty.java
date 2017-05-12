@@ -86,19 +86,23 @@ public class ArrayParty {
     }
 
         //TODO Define the method pack
-//    public ArrayList<String> pack(char[] letters){
-//
-//        for(int i=0; i<letters.length; i++){
-//
-//        }
-//
-//        ArrayList<String> inputArray = new ArrayList<String>();
-//
-//
-//
-//
-//        return inputArray;
-//    }
+    public String pack(char[] letters){
+
+        StringBuilder consecutiveChars = new StringBuilder();
+        consecutiveChars.append("*** Output ***\n: ");
+        consecutiveChars.append(letters[0]);
+
+        for(int i=0; i<letters.length-1; i++){
+
+            if( letters[i] == letters[i+1]){
+                consecutiveChars.append(letters[i+1]);
+            }else{
+                consecutiveChars.append(", " + letters[i+1]);
+            }
+        }
+
+        return consecutiveChars.toString();
+    }
 
 
 }
