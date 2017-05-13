@@ -74,11 +74,9 @@ public class ArrayParty {
 
         for(int i=0; i<nums.length-1; i++) {
 
-            if (nums[i] == nums[i + 1] ) {
                 if(noDuplicates.isEmpty() || noDuplicates.get(noDuplicates.size()-1) != nums[i]) {
                     noDuplicates.add(nums[i]);
                 }
-            }
         }
 
         return noDuplicates;
@@ -100,7 +98,7 @@ public class ArrayParty {
                 consecutiveChars.append(", " + letters[i+1]);
             }
         }
-        
+
         return consecutiveChars.toString();
     }
 
